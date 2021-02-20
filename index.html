@@ -1,0 +1,55 @@
+<!DOCTYPE html >
+<html >
+    <head>
+        <title>Currency Converter</title>
+        <style>
+          body{
+            background-color: gray;
+
+          }
+          input{
+            width: 300px;
+          }
+         
+        </style>
+        <script>
+            function converter(){
+            var dollar = parseInt(document.getElementById('dollar').value);
+            var convert = document.getElementById('convert').value;
+            var cv = document.getElementById('cv12');
+            if(convert == 1){
+                cv.value = dollar * 84.67;
+              cv.type = "text";
+            }
+            if(convert == 2){
+                cv.value = dollar * 64.35;
+              cv.type = "text";
+            }
+            if(convert == 3){
+                cv.value = dollar * 0.82;
+              cv.type = "text";
+            }
+            if(convert == 4){
+                cv.value = dollar * 0.72;
+              cv.type = "text";
+            }
+
+          }
+        </script>
+<head>
+    <body>
+      <h1>Currency Converter</h1>
+       <form action="#" method="post" name="cc">
+         USD: <input id="dollar" type="text" name="dollar" ><br>
+         Convert to: <select name="convert" id ="convert">
+           <option value="0">Select the Currency</option>
+           <option value="1">BDT</option>
+           <option value="2">INR</option>
+           <option value="3">EURO</option>
+           <option value="4">POUNDS</option>
+         </select><br>
+         <input type="button" name="submit" value="Convert" onclick="converter()">
+       </form>
+       <input type="show" name="cv" id="cv12" readonly />
+    </body>
+<html>
